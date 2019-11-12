@@ -1,8 +1,8 @@
 package main
 
 import (
-	"cfg"
 	"log"
+	conf "github.com/ytbiu/cfg"
 )
 
 // 配置文件实体
@@ -24,12 +24,13 @@ type Student struct {
 var c config
 
 func runExample() error {
-	err := cfg.FromConsul(
-		cfg.Addr("consul.exmarttech.com:80"),
-		cfg.ConfigPath("dev1"),
-		cfg.Result(&c),
-		cfg.EncodeType(cfg.YamlEnc),
-		cfg.Hooks(
+
+	err := conf.FromConsul(
+		conf.Addr("consul.exmarttech.com:80"),
+		conf.ConfigPath("dev1"),
+		conf.Result(&c),
+		conf.EncodeType(conf.YamlEnc),
+		conf.Hooks(
 			func() {
 				log.Println("config name : ", c.Dev.Student.Name)
 			}),
