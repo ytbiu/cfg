@@ -1,0 +1,1 @@
+# cfg用于从consul中获取配置文件信息  - 支持变更热加载- 支持编码格式：yaml，json- 调用示例见examle文件例子中采用yaml格式 consul中的key/value设置示例：`key：   dev1value:    student:              name: "Tom"              age: 20`
