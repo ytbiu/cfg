@@ -3,7 +3,7 @@ package cfg
 import (
 	g "github.com/micro/go-micro/config"
 	"github.com/micro/go-micro/config/source"
-	"github.com/micro/go-micro/config/source/consul"
+	"github.com/micro/go-plugins/config/source/consul"
 	"log"
 )
 
